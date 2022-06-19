@@ -1,0 +1,144 @@
+<html>
+	<head>
+		<title>events</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<style>
+			#main {
+				box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+				transition: 0.3s;
+				margin-left: auto;
+				margin-right: auto;
+				
+			}
+			.imgset{
+				padding-top:4px;
+				padding-left:3px;
+				width:39px;
+				height:40px;
+			
+			}
+			
+		.container {
+			border: 2px solid #dedede;
+			background-color: #f1f1f1;
+			border-radius: 5px;
+			padding: 10px;
+			margin: 10px 5px;
+			height:80px
+			}
+
+
+			.darker {
+			border-color: #ccc;
+			background-color: #ddd;
+			}
+
+
+			.container::after {
+				content: "";
+				clear: both;
+				display: table;
+			}
+
+		.container img {
+			float: left;
+			max-width: 60px;
+			width: 100%;
+			margin-right: 20px;
+			border-radius: 50%;
+		}
+		.container img.right {
+			float: right;
+			margin-left: 20px;
+			margin-right:0;
+		}
+
+
+		.time-right {
+			float: right;
+			color: #aaa;
+			}
+
+		.time-left {
+			float: left;
+			color: #999;
+		}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script>
+			
+			function show1()
+			{
+				document.getElementById("d1").style.visibility="visible";
+			}
+						setTimeout("show1()",1000);
+			function show2()
+			{
+				document.getElementById("d2").style.visibility="visible";
+			}
+						setTimeout("show2()",2000);
+			function show3()
+			{
+				document.getElementById("d3").style.visibility="visible";
+			}
+						setTimeout("show3()",3000);
+			function show4()
+			{
+				document.getElementById("d4").style.visibility="visible";
+			}
+						setTimeout("show4()",4000);
+			
+		</script>
+	</head>
+	<body>
+		<div class="row">
+			<div class="container-fluid">
+				<div class="col-12 col-sm-12 col-md-12 col-lg-12" style="height:5%; width:100%; background-color:#128C7E">
+				</div>
+				<div class="col-12 col-sm-12 col-md-12 col-lg-12" style="height:5%; width:100%; background-color:#f7f8fa">
+				</div>
+				<div class="col-12 col-sm-12 col-md-12 col-lg-6" style="height:85%; width:100%; background-color:#f7f8fa">
+					<div class="card" id="main" style="width: 400px";>
+						<div style="height:50px; background-color:#128C7E;color:white;">
+						&nbsp;&nbsp;&nbsp;&nbsp;<a href="events.html" style="font-size:25px;color: white;text-decoration: none;">&#8701;</a>   
+							<img src="pic9.jpg" class="imgset img-circle">&nbsp;&nbsp;
+							<b>238th Championship Dog Show</b>
+						</div>
+						<div class="container" id="d1" style="visibility: hidden" >
+							<img src="pic9.jpg" alt="Avatar" class="img-circle imgset">
+							<p>Hey when is the program</p>
+							<span class="time-right">11:00</span>
+						</div>
+
+						<div class="container darker" id="d2" style="visibility: hidden">
+							<img src="pic4.jpg" alt="Avatar" class="right">
+							<p>on January 5, 2023</p>
+							<span class="time-left">11:01</span>
+						</div>
+
+						<div class="container" id="d3" style="visibility: hidden">
+							<img src="pic9.jpg" alt="Avatar">
+							<p>which is the venue?</p>
+							<span class="time-right">11:02</span>
+						</div>
+
+						<div class="container darker" id="d4" style="visibility: hidden">
+							<img src="pic4.jpg" alt="Avatar" class="right">
+							<p>Ahmedabad, Manorama Party Plot, Naranpura..call +919824033227 for more details</p>
+							<span class="time-left">11:05</span>
+						</div>
+						<div style="height:75px"></div>
+						
+					</div>
+				</div>
+				<div class="col-12 col-sm-12 col-md-12 col-lg-12" style="height:5%; width:100%; background-color:#128C7E">
+				</div>
+			
+		</div>
+		
+	</body>
+</html>

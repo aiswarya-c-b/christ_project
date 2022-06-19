@@ -1,0 +1,73 @@
+<html>
+	<head>
+		<title>about</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		
+		<style>
+			.card {
+				box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+				transition: 0.3s;
+				margin-left: auto;
+				margin-right: auto;
+				padding-top: 10px;
+				background-color: black;
+				width: 370px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="row">
+			<div class="container-fluid">
+				<div class="col-12 col-sm-12 col-md-12 col-lg-12" style="height:5%; width:100%; background-color:#128C7E">
+				</div>
+				<div class="col-12 col-sm-12 col-md-12 col-lg-12" style="height:5%; width:100%; background-color:#f7f8fa">
+				</div>
+				<div class="col-12 col-sm-12 col-md-12 col-lg-6" style="height:85%; width:100%; background-color:#f7f8fa">
+					<div class="card">
+						<div class="progress progress-striped active bg-light" style="height: 1.5px;color: white">
+							<div class="progress-bar progress-bar-light " style="width:0%;"></div>
+						</div>
+						<div>
+							<img id="imgBanner" src="" alt="" width="370" height="456" >
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-sm-12 col-md-12 col-lg-12" style="height:5%; width:100%; background-color:#128C7E">
+			</div>
+		</div>
+		<script>
+			$(".progress-bar").animate({
+				width: "100%"
+				},9000);
+		</script>
+		<script type="text/javascript">
+			var picPaths = ['pic1.jpg','pic2.png','pic3.png'];
+			var curPic = -1;
+			var imgO = new Array();
+			for(i=0; i < picPaths.length; i++) {
+			imgO[i] = new Image();
+			imgO[i].src = picPaths[i];
+			}
+			function swapImage() {
+				curPic = (++curPic > picPaths.length-1)? 5 : curPic;
+				imgCont.src = imgO[curPic].src;
+				setTimeout(swapImage,3000);
+			}
+
+			window.onload=function() {
+				imgCont = document.getElementById('imgBanner');
+				swapImage();
+			}
+			window.setTimeout(function(){
+					window.location.href = "whatsapp.html";
+					}, 9000);
+		</script>
+
+	</body>
+</html>

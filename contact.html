@@ -1,0 +1,77 @@
+<html>
+	<head>
+		<title>Contact page</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<script>
+			$(document).ready(function() {
+			$("#form").validate({
+				rules: {
+						name: 'required',
+						number: {
+									required: true,
+									number: true,
+									maxlength: 10
+								},
+						},
+						submitHandler: function(form) {
+						form.submit();
+						}
+				});	
+			});
+</script>
+		<style>
+			#main {
+					box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+					transition: 0.3s;
+					margin-left: auto;
+					margin-right: auto;
+				}
+			#form {
+					padding-top:10%;
+					text-align:center;
+					opacity: 0.5;
+				}
+			.formaline {
+					border: 0px;
+					text-align:center;
+					width:80%;
+					height:10%;
+			}
+			#submit {
+					background-color: #128C7E;
+					color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="row">
+			<div class="container-fluid">
+				<div class="col-12 col-sm-12 col-md-12 col-lg-12" style="height:5%; width:100%; background-color:#128C7E">
+					<a href="whatsapp.html" style="font-size:25px;color: white;text-decoration: none;">&#8701;</a>
+				</div>
+				<div class="col-12 col-sm-12 col-md-12 col-lg-12" style="height:5%; width:100%; background-color:#f7f8fa">
+				</div>
+				<div class="col-12 col-sm-12 col-md-12 col-lg-6" style="height:85%; width:100%; background-color:#f7f8fa">
+					<div class="card" id="main" style="width: 400px";>
+						<div style="background-color: #128C7E;color: white;font-size: 20px"><div style="text-align:center">Contact</div></div>
+						<form id="form">
+							<input type="text" class="formaline" value="User Name" name="name" required><hr>
+							<input type="text" class="formaline" value="Phone Number" name="number" required><hr>
+							<input type="submit" id="button" style="background-color: #128C7E;color: white;" value="submit" ><hr>
+						</form>
+					</div>
+				</div>
+				<div class="col-12 col-sm-12 col-md-12 col-lg-12" style="height:5%; width:100%; background-color:#128C7E">
+				</div>
+				
+			</div>
+		</div>
+		<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+	</body>
+</html>
